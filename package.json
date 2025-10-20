@@ -3,8 +3,9 @@
   "name": "sora",
   "title": "Sora",
   "description": "Quickly access Sora features",
-  "icon": "extension-icon.png",
+  "icon": "sora-icon.png",
   "author": "chrismessina",
+  "type": "module",
   "platforms": [
     "macOS",
     "Windows"
@@ -13,12 +14,59 @@
     "Media"
   ],
   "license": "MIT",
+  "preferences": [
+    {
+      "name": "username",
+      "type": "textfield",
+      "required": false,
+      "title": "Username",
+      "description": "Your Sora username (without @)",
+      "placeholder": "username"
+    }
+  ],
   "commands": [
     {
       "name": "home",
       "title": "Home",
       "subtitle": "Sora",
       "description": "Go to Sora's Home Feed",
+      "mode": "no-view"
+    },
+    {
+      "name": "explore",
+      "title": "Explore",
+      "subtitle": "Sora",
+      "description": "Browse Sora's Explore page",
+      "mode": "no-view"
+    },
+    {
+      "name": "view-profile",
+      "title": "View Profile",
+      "subtitle": "Sora",
+      "description": "Go to your Sora profile",
+      "mode": "no-view"
+    },
+    {
+      "name": "go-to-profile",
+      "title": "Go to Profile",
+      "subtitle": "Sora",
+      "description": "Go to a specific Sora user profile",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "username",
+          "description": "The username to view",
+          "type": "text",
+          "placeholder": "@username",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "drafts",
+      "title": "Drafts",
+      "subtitle": "Sora",
+      "description": "View your Sora drafts",
       "mode": "no-view"
     }
   ],
@@ -27,12 +75,12 @@
     "@raycast/utils": "^1.17.0"
   },
   "devDependencies": {
-    "@raycast/eslint-config": "^2.0.4",
+    "@raycast/eslint-config": "^2.1.1",
     "@types/node": "22.13.10",
-    "@types/react": "19.0.10",
-    "eslint": "^9.22.0",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "@types/react": "19.1.13",
+    "eslint": "^9.35.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
   },
   "scripts": {
     "build": "ray build",
