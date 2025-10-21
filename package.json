@@ -44,7 +44,7 @@
       "title": "View Profile",
       "subtitle": "Sora",
       "description": "Go to your Sora profile",
-      "mode": "no-view"
+      "mode": "view"
     },
     {
       "name": "go-to-profile",
