@@ -6,10 +6,27 @@
   - [x] Go to Profile (https://sora.chatgpt.com/profile/@username)
   - [x] Drafts (https://sora.chatgpt.com/drafts)
 - [x] Add Preference for `Username` (necessary to access Profile command)
-- [ ] Add Preference for `OpenAI Key`
+- [X] Add Preference for `OpenAI Key`
 - [ ] Add support for [Sora API](https://platform.openai.com/docs/guides/video-generation):
   - [ ] Add command for `Create Video`: Start a new render job from a prompt, with optional reference inputs or a remix ID.
   - [ ] Add command for `List Videos`: Enumerate your videos with pagination for history, dashboards, or housekeeping.
-    - [ ] Add command for `Get Video Status`: Retrieve the current state of a render job and monitor its progress.
-    - [ ] Add command for `Download Video`: Fetch the finished MP4 once the job is completed.
-    - [ ] Add command for `Delete Video`: Remove an individual video ID from OpenAI’s storage
+    - [ ] Add Action to `Open Video`: Open an individual video's URL
+    - [ ] Add Action to `Copy Video URL`: Copy an individual video's URL
+    - [ ] Add Action to `Download Video`: Fetch the finished MP4 once the job is completed.
+    - [ ] Add Action to `Delete Video`: Remove an individual video ID from OpenAI’s storage
+- [ ] Add support for [Sora Remix API](https://platform.openai.com/docs/guides/video-generation/remix):
+  - [ ] Add Action to `Remix Video`: Create variations of existing videos by modifying parameters or remixing with a new prompt.
+  - [ ] Add Action to `List Remixes`: Enumerate your remixes with pagination for history, dashboards, or housekeeping.
+    - [ ] Add Action to `Open Remix`: Open an individual remix's URL
+    - [ ] Add Action to `Copy Remix URL`: Copy an individual remix's URL
+    - [ ] Add Action to `Download Remix`: Fetch the finished MP4 once the job is completed.
+    - [ ] Add Action to `Delete Remix`: Remove an individual remix ID from OpenAI’s storage
+- [ ] Add support for [Sora Reference API](https://platform.openai.com/docs/guides/video-generation/reference-inputs):
+  - [ ] Add Action to `Add Reference Input`: Upload reference images or videos to guide generation.
+- [ ] Add Home View with a visual gallery of video thumbnails
+  - [ ] Add Action to `Remix Video`: Create variations of existing videos by modifying parameters or remixing with a new prompt.
+  - [ ] Add Action to `Open Video`: Open an individual video's URL
+  - [ ] Add Action to `Copy Video URL`: Copy an individual video's URL
+  - [ ] Add Action to `Download Video`: Fetch the finished MP4 once the job is completed.
+- [ ] Add Raycast AI Tool to `Create Video` with reference image
+- [ ] Add ai.yaml evals for each tool

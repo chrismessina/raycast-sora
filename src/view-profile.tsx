@@ -1,9 +1,6 @@
 import { Detail, ActionPanel, Action, open, getPreferenceValues, openExtensionPreferences } from "@raycast/api";
-import { SORA_BASE_URL } from "./constants";
-
-interface Preferences {
-  username?: string;
-}
+import { SORA_BASE_URL } from "./utils/constants";
+import { Preferences } from "./types";
 
 export default function Command() {
   const preferences = getPreferenceValues<Preferences>();

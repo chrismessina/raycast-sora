@@ -13,6 +13,13 @@
   "categories": [
     "Media"
   ],
+  "keywords": [
+    "chat",
+    "gpt",
+    "openai",
+    "sora",
+    "video"
+  ],
   "license": "MIT",
   "preferences": [
     {
@@ -22,9 +29,31 @@
       "title": "Username",
       "description": "Your Sora username (without @)",
       "placeholder": "username"
+    },
+    {
+      "name": "apiKey",
+      "label": "Open AI API Key",
+      "description": "Enter your personal Open AI API Key",
+      "type": "password",
+      "title": "OpenAI API Key",
+      "required": true
     }
   ],
   "commands": [
+    {
+      "name": "create-video",
+      "title": "Create Video",
+      "subtitle": "Sora",
+      "description": "Generate a new video with Sora AI",
+      "mode": "view"
+    },
+    {
+      "name": "list-videos",
+      "title": "List Videos",
+      "subtitle": "Sora",
+      "description": "View and manage your Sora videos",
+      "mode": "view"
+    },
     {
       "name": "home",
       "title": "Home",
@@ -68,11 +97,20 @@
       "subtitle": "Sora",
       "description": "View your Sora drafts",
       "mode": "no-view"
+    },
+    {
+      "name": "prompt-history",
+      "title": "Prompt History",
+      "subtitle": "Sora",
+      "description": "View and reuse your previous video prompts",
+      "mode": "view"
     }
   ],
   "dependencies": {
+    "@chrismessina/raycast-logger": "^1.0.0",
     "@raycast/api": "^1.103.3",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/utils": "^1.17.0",
+    "openai": "^6.6.0"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.1.1",

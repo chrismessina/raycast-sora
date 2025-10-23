@@ -1,5 +1,5 @@
 import { LaunchProps, open } from "@raycast/api";
-import { SORA_BASE_URL } from "./constants";
+import { SORA_BASE_URL } from "./utils/constants";
 
 interface Arguments {
   username: string;
