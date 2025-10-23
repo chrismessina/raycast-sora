@@ -46,7 +46,10 @@ export function VideoList({
     }
 
     // Filter by search text
-    if (searchText && video.prompt) {
+    if (searchText) {
+      if (!video.prompt) {
+        return false;
+      }
       return video.prompt.toLowerCase().includes(searchText.toLowerCase());
     }
 

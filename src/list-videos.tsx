@@ -39,7 +39,7 @@ export default function Command() {
       onCopyUrl={handleCopyVideoUrl}
       onCheckStatus={(video: Video) => handleCheckVideoStatus(video, refresh)}
       onCopyPrompt={handleCopyPrompt}
-      onRegenerateVideo={handleRegenerateVideo}
+      onRegenerateVideo={(video: Video) => handleRegenerateVideo(video, refresh)}
     />
   );
 }

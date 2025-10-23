@@ -167,7 +167,7 @@ export async function handleCopyPrompt(video: Video) {
   });
 }
 
-export async function handleRegenerateVideo(video: Video) {
+export async function handleRegenerateVideo(video: Video, onSuccess?: () => Promise<void>) {
   // Try to get prompt and settings from video object or local storage
   let prompt = video.prompt;
   let model = video.model;
@@ -231,6 +231,11 @@ export async function handleRegenerateVideo(video: Video) {
         });
       },
     };
+
+    // Refresh the list to show the new video
+    if (onSuccess) {
+      await onSuccess();
+    }
   } catch (error) {
     const friendlyMessage = getUserFriendlyError(error);
     logger.error("Regenerate video failed", { videoId: video.id, error: friendlyMessage });
